@@ -1,6 +1,9 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import HomePage from "../components/Home/HomePage";
+import HomeDetails from "../components/Home/HomeDetails";
+import Home from "../components/Home/Home";
 
 
 
@@ -11,18 +14,13 @@ export default function HomeLayout()  {
     return(
 <>
 
-   <div>
-    <div className="bg-slate-100">
+
 
     < Navbar></Navbar>  
    
 
-<Outlet></Outlet>
+<Outlet></Outlet> 
 
- </div>
-
-      
-</div>
 </>
    
     )

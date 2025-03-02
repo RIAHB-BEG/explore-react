@@ -1,4 +1,10 @@
+
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../authProvider/AuthProvider";
+
+
+
 
 
 export default function Navbar() {
@@ -9,7 +15,7 @@ export default function Navbar() {
         <div className="pt-20 me-52 ms-52">
 
 
-            <div className="navbar bg-slate-100">
+            <div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -60,7 +66,7 @@ export default function Navbar() {
 <li>
           
           <NavLink to="/login"  className="btn bg-transparent border-green-400 text-green-400 duration-0 me-4">Login Page</NavLink>
-           
+        
            
           </li>  
          
@@ -68,12 +74,17 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="navbar-end gap-10 ">
-          <Link to="/login">
+          {/* <Link to="/login">
             <button className="btn bg-lime-500 p-4 pb-10 rounded-xl text-white text-lg">Sign In</button>
           
-          </Link>
+          </Link> */}
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-cWUs3pYA_8DMiWUevXRneH3TNv59GLweTg8wjSufM4RMNDmTi3AR-uRqxSHV68aTxh-o9Q&s" className="w-12" alt="" />
+        <Link to="/login">
         
-          <button className="btn bg-teal-500 p-4 pb-10 rounded-xl text-white text-lg">Sign Up</button>
+         <button className="btn bg-teal-500 p-4 pb-10 rounded-xl text-white text-lg">Log In</button>
+        
+        </Link>
+         
         </div>
       </div>
     

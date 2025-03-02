@@ -27,7 +27,7 @@ export default function HomePage(){
     Home Lists
    </div>
 </div>
-<div className=" grid grid-cols-3 gap-10 me-60 ms-60 mt-10 mb-20 bg-slate-100">
+<div className=" grid grid-cols-3 gap-10 me-60 ms-60 mt-10 mb-20">
          {homes.map((home) => (
       <ListedHomes key={home.id} home={home}></ListedHomes>// Added key prop
       ))}

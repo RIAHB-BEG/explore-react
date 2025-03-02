@@ -1,41 +1,59 @@
-import { Link } from "react-router-dom";
-import Footer from "../Footer/Footer";
+// import { Link, useNavigate } from "react-router-dom";
+// import Footer from "../Footer/Footer";
+// import { useContext } from "react";
+// import { SignContext } from "../authProvider/SignInProvider"; // Ensure this exists
 
-export default function LOginPage (){
+// export default function LOginPage() { // Fix component name
+//   const { signIn } = useContext(SignContext);
+//   const navigate = useNavigate();
 
-    return(
-        <>
-<div className="hero min-h-screen bg-base-200 ">
-  <div className="hero-content flex-col lg:flex-row-reverse">
+//   const handleSignIn = (e) => {
+//     e.preventDefault();
 
-    <div className="card flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100 w-[900px] -mt-56 ">
-      <form className="card-body ">
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Email</span>
-          </label>
-          <input type="email" placeholder="email" className="input input-bordered" required />
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Password</span>
-          </label>
-          <input type="password" placeholder="password" className="input input-bordered" required />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
-        </div>
-        <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
-        </div>
-        <Link to="/register">New this site ? please register.</Link>
-      </form>
-      
-    </div>
-  </div>
-</div>
-<Footer></Footer>
-        
-        </>
-    )
-}
+//     const form = new FormData(e.currentTarget);
+//     const email = form.get("email");
+//     const password = form.get("password");
+
+//     signIn(email, password)
+//       .then((result) => {
+//         console.log("Logged in user:", result.user);
+//         navigate("/home"); // Change to "/" if needed
+//       })
+//       .catch((error) => console.error("Login error:", error));
+//   };
+
+//   return (
+//     <>
+//       <div className="mb-20">
+//         <div className="hero flex-col lg:flex-row-reverse mt-20">
+//           <div className="card flex-shrink-0 max-w-md shadow-2xl bg-base-100 w-[900px]">
+//             <form onSubmit={handleSignIn} className="card-body">
+//               <div className="form-control">
+//                 <label className="label">
+//                   <span className="label-text">Email</span>
+//                 </label>
+//                 <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
+//               </div>
+//               <div className="form-control">
+//                 <label className="label">
+//                   <span className="label-text">Password</span>
+//                 </label>
+//                 <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
+//                 <label className="label">
+//                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+//                 </label>
+//               </div>
+//               <div className="form-control mt-6">
+//                 <button className="btn btn-primary">Login</button>
+//               </div>
+//               <div className="text-center mt-4">
+//                 <Link to="/register" className="text-blue-500 underline">New to this site? Please register.</Link>
+//               </div>
+//             </form>
+//           </div>
+//         </div>
+//       </div>
+//       <Footer />
+//     </>
+//   );
+// }
