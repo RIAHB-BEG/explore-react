@@ -1,105 +1,91 @@
 import { NavLink } from "react-router-dom";
 import Footer from "../Footer/Footer";
 
-export default function Contact(){
-    return(
-        <>
-       <div className="ms-56 pt-24">
-             <h1 className="text-3xl font-bold">
-            Contact Page
-        </h1>
-        <div className="flex gap-72 mt-5">
-<p className="font-bold  me-44">
-        Check out our website for a wide range of self-serve solutions. please call <br />customer support or use or use one of these numbers
-        </p>  
+export default function Contact() {
+  return (
+    <>
+      {/* Contact Page Header */}
+      <div className="pt-24 text-center md:text-left px-6 mt-20">
+        <h1 className="text-3xl font-bold">Contact Page</h1>
+        <div className="md:flex justify-between items-center mt-5">
+          <p className="font-bold">
+            Check out our website for a wide range of self-serve solutions. Please call
+            <br />
+            customer support or use one of these numbers.
+          </p>
+          <NavLink to={`/home`}>
+            <button className="btn border-2 border-black px-5 py-2 mt-4 md:mt-0 bg-white">
+              Home
+            </button>
+          </NavLink>
+        </div>
+      </div>
 
-    <NavLink to={`/home`}>
-<p className="btn bg-transparent border-black border-2 bg-white pe-5 ps-5 text-right">
+      {/* Contact Forms Section */}
+      <div className="max-w-5xl mx-auto px-6 mt-16 pb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          
+          {/* Support Ticket Section */}
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <h1 className="font-bold text-2xl">Need help? Open a ticket</h1>
+            <p className="font-medium text-gray-600 mt-3">
+              Our support team will get back to you ASAP via email.
+            </p>
 
-        Home 
+            <div className="mt-5 space-y-4">
+              <div>
+                <label className="font-semibold">Your Name</label>
+                <input type="text" placeholder="Enter Your Name" className="w-full p-3 mt-1 border rounded-md" />
+              </div>
 
-       
-</p> 
-    </NavLink>
+              <div>
+                <label className="font-semibold">Your Email</label>
+                <input type="email" placeholder="Enter Your Email" className="w-full p-3 mt-1 border rounded-md" />
+              </div>
 
-
-       </div>
- 
-
-        </div> 
-        <div className="ms-56">
-        <div>
-            <div  className="flex grid-cols-2 gap-10 mt-16 pb-44 ">
-     <div className="bg-slate-200 ">
-    <h1 className="font-bold text-3xl  mt-20 pe-20 ps-20">
-            Need help ? Open a ticket
-        </h1> 
-        <p className="font-bold pe-20 ps-20  mt-5">
-        Our support team will get back to you ASAP via email.
-
-
-        </p>
-             <div className="font-bold pe-20 ps-20 mt-5 flex gap-5 ">
-           
-            <div className="mt-3">
-                 Your Name <br />
-            <input type="text" name="" id="" placeholder="Enter Your Name" className=" pe-28 ps-5 pt-3 pb-3 mt-3"/>
-
+              <div>
+                <label className="font-semibold">Message</label>
+                <textarea placeholder="Enter your message" className="w-full p-3 mt-1 border rounded-md h-32"></textarea>
+              </div>
             </div>
-            <div className="mt-3">
-            Your Email <br />
-                     <input type="email" email="" id="" placeholder="Enter Your Email" className=" pe-28 ps-5 pt-3 pb-3 mt-3"/>   
-            </div>
-   
-      
-   
-</div>
-         <div className="mt-5 font-bold  pe-20 ps-20">
-              Massage <br />
-                     <input type="massage" email="" id="" placeholder="Massage" className=" pe-96 ps-5 pt-5 pb-28  mt-3"/>   
-            </div>
-            <div className="btn bg-blue-500 text-white  me-20 ms-20 mt-5 pe-10 ps-10 mb-20">
-                Submit Ticket
-            </div>
-        </div> 
-       <div className="bg-slate-200">
-             <h1 className="font-bold text-3xl  mt-20 pe-10  ps-10">
-        Subscribe to receive future <br /> updates
-        </h1>
 
-<p  className="font-bold pe-10 mt-3 ps-10 ">Lorem ipsum dolor sited Sed ullam corper <br />consectur adipiscing Mae ornare <br />massa quis lectus.</p>
-<div className="font-bold ms-10   mt-8  ">
-           
-           <div className="mt-3">
-                Your Name <br />
-           <input type="text" name="" id="" placeholder="Enter Your Name" className=" pe-28 ps-5 pt-3 pb-3 mt-3"/>
+            <button className="btn bg-blue-500 text-white w-full py-3 mt-5 rounded-lg shadow-md hover:bg-blue-600 transition">
+              Submit Ticket
+            </button>
+          </div>
 
-           </div>
-           <div className="mt-3">
-           Your Email <br />
-                    <input type="email" email="" id="" placeholder="Enter Your Email" className=" pe-28 ps-5 pt-3 pb-3 mt-3"/>   
-           </div>
-  
-      
-  
-</div>
-     <div className="btn text-white bg-blue-500 ms-10 mt-8  pe-36  ps-36 mb-5">
-                Subscribe
+          {/* Subscription Section */}
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <h1 className="font-bold text-2xl">Subscribe to receive future updates</h1>
+            <p className="font-medium text-gray-600 mt-3">
+              Stay informed with our latest updates. No spam, guaranteed!
+            </p>
+
+            <div className="mt-5 space-y-4">
+              <div>
+                <label className="font-semibold">Your Name</label>
+                <input type="text" placeholder="Enter Your Name" className="w-full p-3 mt-1 border rounded-md" />
+              </div>
+
+              <div>
+                <label className="font-semibold">Your Email</label>
+                <input type="email" placeholder="Enter Your Email" className="w-full p-3 mt-1 border rounded-md" />
+              </div>
             </div>
-        
-    <p className="-ms-8 font-bold  mb-5 text-center">No spam guaranteed, So please don’t <br /> send any spam mail.</p>
-       </div>  
+
+            <button className="btn bg-blue-500 text-white w-full py-3 mt-5 rounded-lg shadow-md hover:bg-blue-600 transition">
+              Subscribe
+            </button>
+
+            <p className="text-center font-medium text-gray-600 mt-4">
+              No spam guaranteed, so please don’t send any spam mail.
+            </p>
+          </div>
 
         </div>
-        
-            </div>
-   
+      </div>
 
-         
-        </div>
-        
-        
-    <Footer></Footer>
-        </>
-    )
+      <Footer />
+    </>
+  );
 }
