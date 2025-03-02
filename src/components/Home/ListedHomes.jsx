@@ -5,7 +5,7 @@ export default function ListedHomes({ home }) {
 
   return (
     <NavLink to={`/home/${id}`} className="block">
-      <div className="card bg-white w-full sm:w-80 md:w-96 shadow-lg border-2 h-full flex flex-col transition-transform transform hover:scale-105">
+      <div className="card bg-white w-full sm:w-80 md:w-96 shadow-lg border-2 md:ms-12  h-full flex flex-col transition-transform transform hover:scale-105">
         
         {/* Image Section */}
         <figure className="p-5 m-5 bg-zinc-100 rounded-xl">
