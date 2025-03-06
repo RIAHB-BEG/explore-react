@@ -7,7 +7,9 @@ import "react-toastify/dist/ReactToastify.css"; // Import toast styles
 
 export default function Register() {
   const { signUp } = useContext(AuthContext);
+
   const navigate = useNavigate();
+
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -20,12 +22,16 @@ export default function Register() {
       .then((result) => {
         console.log(result.user);
         toast.success("Registered Successfully!");
-        navigate("/home");
+      
+        navigate("/Home" );
       })
       .catch((error) => {
         console.error(error);
         toast.error("Registration Failed!");
       });
+    
+
+    
   };
 
   return (
@@ -81,12 +87,15 @@ export default function Register() {
             </div>
 
             {/* Register Button */}
+           
             <div className="form-control">
-              <button type="submit" className="btn btn-primary w-full">
+              <button type="submit" className="btn btn-primary w-full " >
                 Register
               </button>
             </div>
 
+            
+            
             {/* Already have an account? */}
             <p className="text-sm text-center">
           

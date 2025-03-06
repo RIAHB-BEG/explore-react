@@ -1,7 +1,11 @@
-import { Link, NavLink } from "react-router-dom";
-import Footer from "../Footer/Footer";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+
+
 
 export default function Navbar() {
+
+  
+    
   return (
     <>
      <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
@@ -67,6 +71,8 @@ export default function Navbar() {
                 Login Page
               </NavLink>
             </li>
+               
+           
           </ul>
           
         </div>
@@ -86,7 +92,7 @@ export default function Navbar() {
         </div>
       </div>
     </div>
-   
+
     </>
    
     

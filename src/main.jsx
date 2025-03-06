@@ -14,6 +14,7 @@ import Contact from './Contact/Contact';
 import Register from './register/Register';
 import AuthProvider from './authProvider/AuthProvider';
 import About from './About/About';
+import DashBoard from './DashBoard/DashBoard';
 
 
 
@@ -30,6 +31,7 @@ const router = createBrowserRouter([{
   element:<Home></Home>,
   
     },
+
     {
       path:'/home',
       element:<Home></Home>,
