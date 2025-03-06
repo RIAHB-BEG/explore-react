@@ -1,6 +1,10 @@
 
 import HomePage from "./HomePage";
-import About from "../../About/About";
+
+import Footer from "../../Footer/Footer";
+import Main from "../../Main/Main";
+import { Outlet } from "react-router-dom";
+
 
 export default function Home(){
  
@@ -8,11 +12,9 @@ export default function Home(){
     <>
 
 <HomePage></HomePage>
-
+<Main></Main>
 
  
-
-<About></About>
 
 
    

@@ -1,10 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 export default function ListedHomes({ home }) {
   const { image, estate_title, segment_name, status, price, area, id } = home || {};
 
   return (
-    <NavLink to={`/home/${id}`} className="block">
+    <>
+  
+        <NavLink to={`/home/${id}`} className="block">
       <div className="card bg-white w-full sm:w-80 md:w-96 shadow-lg border-2 md:ms-12  h-full flex flex-col transition-transform transform hover:scale-105">
         
         {/* Image Section */}
@@ -35,6 +37,14 @@ export default function ListedHomes({ home }) {
           <h2 className="text-lg font-bold mt-2 text-gray-700">Price: ${price}</h2>
         </div>
       </div>
-    </NavLink>
+     
+
+    </NavLink> 
+    
+
+    
+    
+    </>
+
   );
 }

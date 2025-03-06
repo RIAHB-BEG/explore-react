@@ -1,8 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 export default function Navbar() {
   return (
-    <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <>
+     <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="navbar px-6 md:px-10 lg:px-20 flex justify-between items-center py-4">
         
         {/* Left - Brand Logo */}
@@ -31,6 +33,7 @@ export default function Navbar() {
             >
               <li><NavLink to="/home">Home</NavLink></li>
               <li><NavLink to="/contact">Contact</NavLink></li>
+              <li><NavLink to="/about">About</NavLink></li>
               <li><NavLink to="/login">Login Page</NavLink></li>
             </ul>
           </div>
@@ -40,8 +43,8 @@ export default function Navbar() {
         </div>
 
         {/* Center - Navigation (Hidden on Mobile) */}
-        <div className="hidden lg:flex">
-          <ul className="menu menu-horizontal space-x-6 text-lg">
+        <div className="hidden lg:flex ">
+          <ul className="menu menu-horizontal space-x-6 text-lg ">
             <li>
               <NavLink to="/home" className="btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white">
                 Home
@@ -51,13 +54,21 @@ export default function Navbar() {
               <NavLink to="/contact" className="btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white">
                 Contact
               </NavLink>
+             
             </li>
+            <li>
+               <NavLink to="/about" className="btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white">
+              About
+              </NavLink>
+            </li>
+           
             <li>
               <NavLink to="/login" className="btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white">
                 Login Page
               </NavLink>
             </li>
           </ul>
+          
         </div>
 
         {/* Right - Profile & Login Button */}
@@ -75,5 +86,9 @@ export default function Navbar() {
         </div>
       </div>
     </div>
+   
+    </>
+   
+    
   );
 }

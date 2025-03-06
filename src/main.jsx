@@ -13,6 +13,7 @@ import Contact from './Contact/Contact';
 
 import Register from './register/Register';
 import AuthProvider from './authProvider/AuthProvider';
+import About from './About/About';
 
 
 
@@ -25,11 +26,15 @@ const router = createBrowserRouter([{
 
   children :[
     {
-  path:'/home',
+  path:'/',
   element:<Home></Home>,
   
     },
-
+    {
+      path:'/home',
+      element:<Home></Home>,
+      
+        },
     {
       path:'/contact',
      
@@ -41,12 +46,12 @@ const router = createBrowserRouter([{
       
           element:<HomeDetails></HomeDetails>
         },
-        // {
-        //   path:'/login',
+        {
+          path:'/about',
       
          
-        //   element:<LOginPage></LOginPage>,
-        // },
+          element:<About></About>,
+        },
         {
           path:'/login',
       

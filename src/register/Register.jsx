@@ -30,7 +30,7 @@ export default function Register() {
 
   return (
     <>
-      <div className="flex justify-center items-center min-h-screen px-4">
+      <div className="flex justify-center items-center min-h-screen px-6 mb-10 mt-28">
         <div className="card w-full max-w-md shadow-xl bg-white p-8 rounded-lg">
           <h2 className="text-2xl font-bold text-center mb-4">Register</h2>
 
@@ -76,9 +76,7 @@ export default function Register() {
                 required
               />
               <label className="label">
-                <Link to="/forgot-password" className="label-text-alt text-blue-500 hover:underline">
-                  Forgot password?
-                </Link>
+              
               </label>
             </div>
 
@@ -91,10 +89,7 @@ export default function Register() {
 
             {/* Already have an account? */}
             <p className="text-sm text-center">
-              Already have an account?{" "}
-              <Link to="/login" className="text-blue-500 hover:underline">
-                Login here
-              </Link>
+          
             </p>
           </form>
 
@@ -102,7 +97,7 @@ export default function Register() {
         </div>
       </div>
 
-      <Footer />
+    
     </>
   );
 }
