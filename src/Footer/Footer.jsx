@@ -32,6 +32,9 @@ export default function Footer() {
           <Link to={"/home"} className="hover:text-gray-300">
             Home
           </Link>
+          <Link to={"/Listed Homes"} className="hover:text-gray-300">
+          Wishlist Homes
+          </Link>
           <Link to={"/contact"} className="hover:text-gray-300">
             Contact
           </Link>

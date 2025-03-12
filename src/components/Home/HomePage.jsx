@@ -1,8 +1,10 @@
 import { Link, NavLink } from "react-router-dom"; 
 import ListedHomes from "./ListedHomes";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../authProvider/authProvider";
 
 export default function HomePage() {
+  const {user} = useContext(AuthContext)
   const [homes, setHomes] = useState([]);
 
   useEffect(() => {
@@ -21,9 +23,22 @@ export default function HomePage() {
             Home is a shelter from storms 
             <span className="block mt-4">all sorts of storms</span>
           </p>
-          <button className="mt-6 px-6 py-3 bg-green-500 text-lg font-bold text-white rounded-lg shadow-md hover:bg-green-600 transition">
-            <NavLink to="/login">Learn More</NavLink>
-          </button>
+          {user ? (
+  <NavLink
+    to="/Blog"
+    
+    className="btn border-none px-6 bg-green-500  hover:bg-green-500 text-white"
+  >
+   Learn More
+  </NavLink>
+) : (
+  <NavLink
+    to="/login"
+    className="btn border-none px-6 bg-green-500  hover:bg-green-500 text-white"
+  >
+   Learn More
+  </NavLink>
+)}
         </div>
       </div>
 

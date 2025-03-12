@@ -1,37 +1,42 @@
 import { Link, useNavigate } from "react-router-dom";
-import Footer from "../Footer/Footer";
-import { useContext } from "react";
-import { AuthContext } from "../authProvider/AuthProvider";
+import { useContext, useState } from "react";
+
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Import toast styles
+import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../authProvider/authProvider";
 
 export default function Register() {
+
   const { signUp } = useContext(AuthContext);
-
+ 
   const navigate = useNavigate();
-
 
   const handleRegister = (e) => {
     e.preventDefault();
 
     const form = new FormData(e.currentTarget);
+    const name = form.get("name");
     const email = form.get("email");
     const password = form.get("password");
 
     signUp(email, password)
       .then((result) => {
         console.log(result.user);
-        toast.success("Registered Successfully!");
+
       
-        navigate("/Home" );
+        // const token = result.user?.accessToken || "default-token";
+        // localStorage.setItem("authToken", token);
+        // setAuthToken(token);
+
+        toast.success("Registered Successfully!");
+
+       
+        navigate("/Blog");
       })
       .catch((error) => {
         console.error(error);
-        toast.error("Registration Failed!");
+        toast.error("already registered !");
       });
-    
-
-    
   };
 
   return (
@@ -40,7 +45,10 @@ export default function Register() {
         <div className="card w-full max-w-md shadow-xl bg-white p-8 rounded-lg">
           <h2 className="text-2xl font-bold text-center mb-4">Register</h2>
 
-          <form onSubmit={handleRegister} className="space-y-4">
+          <form onSubmit={handleRegister} className="space-y-4"
+
+
+          >
             {/* Name Input */}
             <div className="form-control">
               <label className="label">
@@ -81,32 +89,27 @@ export default function Register() {
                 className="input input-bordered w-full"
                 required
               />
-              <label className="label">
-              
-              </label>
             </div>
 
             {/* Register Button */}
-           
             <div className="form-control">
-              <button type="submit" className="btn btn-primary w-full " >
+              <button type="submit" className="btn btn-primary w-full">
                 Register
               </button>
             </div>
 
-            
-            
             {/* Already have an account? */}
-            <p className="text-sm text-center">
-          
+            <p className="text-sm text-center mt-2">
+              Already have an account ?
+              <Link to="/login" className="text-blue-500 hover:underline ms-1">
+                Login
+              </Link>
             </p>
           </form>
 
           <ToastContainer />
         </div>
       </div>
-
-    
     </>
   );
 }

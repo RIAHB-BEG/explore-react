@@ -12,9 +12,15 @@ import HomeDetails from './components/Home/HomeDetails';
 import Contact from './Contact/Contact';
 
 import Register from './register/Register';
-import AuthProvider from './authProvider/AuthProvider';
+
 import About from './About/About';
-import DashBoard from './DashBoard/DashBoard';
+
+import AuthProvider from './authProvider/authProvider';
+import Login from './LoginPage/LOginPage';
+import HomeDetails2 from './HomeDetails2.jsx/HomeDetails2';
+import Blog from './Blog/Blog';
+
+
 
 
 
@@ -49,16 +55,34 @@ const router = createBrowserRouter([{
           element:<HomeDetails></HomeDetails>
         },
         {
+          path:'/Listed Homes',
+          loader:()=>fetch("home.json"),
+         
+          element:<HomeDetails2></HomeDetails2>,
+        },
+        {
           path:'/about',
       
          
           element:<About></About>,
         },
         {
-          path:'/login',
+          path:'/register',
       
          
           element: <Register></Register>,
+        },
+        {
+          path:'/login',
+      
+         
+          element:<Login></Login>,
+        },
+        {
+          path:'/Blog',
+      
+         
+          element:<Blog></Blog>,
         },
     
   ]

@@ -21,7 +21,7 @@
       "status": "rent",
       "area": "1200 sq ft",
       "location": "New York, NY",
-      "facilities": ["Living Room", "Gym", "Rooftop Terrace", "Kitchen"],
+      "facilities": ["#Living Room", "#Gym", "#Rooftop Terrace", "#Kitchen"],
       "image": "https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=600",
       "view_property": "View_Property"
     },
@@ -34,7 +34,7 @@
       "status": "sale",
       "area": "1800 sq ft",
       "location": "Austin, TX",
-      "facilities": ["Living Room", "Garage", "Kitchen", "Backyard"],
+      "facilities": ["#Living Room", "#Garage", "#Kitchen", "#Backyard"],
       "image": "http://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&w=600",
       "view_property": "View_Property"
     },
@@ -47,7 +47,7 @@
       "status": "rent",
       "area": "500 sq ft",
       "location": "Boston, MA",
-      "facilities": ["Living Room", "Study Area", "Kitchen", "Laundry Room"],
+      "facilities": ["#Living Room", "#Study Area", "#Kitchen", "#Laundry Room"],
       "image": "https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=600",
       "view_property": "View_Property"
     },
@@ -60,7 +60,7 @@
       "status": "rent",
       "area": "1000 sq ft",
       "location": "Orlando, FL",
-      "facilities": ["Living Room", "Medical Assistance", "Kitchen", "Community Center"],
+      "facilities": ["#Living Room", "#Medical Assistance", "#Kitchen", "#Community Center"],
       "image": "https://images.pexels.com/photos/208736/pexels-photo-208736.jpeg?auto=compress&cs=tinysrgb&w=600",
       "view_property": "View_Property"
     },
@@ -73,7 +73,7 @@
       "status": "rent",
       "area": "1500 sq ft",
       "location": "Lake Tahoe, CA",
-      "facilities": ["Living Room", "Fireplace", "Kitchen", "Lake View"],
+      "facilities": ["#Living Room", "#Fireplace", "#Kitchen", "#Lake View"],
       "image": "https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg?auto=compress&cs=tinysrgb&w=600",
       "view_property": "View_Property"
     },
@@ -86,7 +86,7 @@
       "status": "rent",
       "area": "2000 sq ft",
       "location": "Chicago, IL",
-      "facilities": ["Living Room", "Private Balcony", "Kitchen", "Home Office"],
+      "facilities": ["#Living Room", "#Private Balcony", "#Kitchen", "#Home Office"],
       "image": "https://images.pexels.com/photos/87223/pexels-photo-87223.jpeg?auto=compress&cs=tinysrgb&w=600",
       "view_property": "View_Property"
     },
@@ -99,7 +99,7 @@
       "status": "sale",
       "area": "1600 sq ft",
       "location": "Asheville, NC",
-      "facilities": ["Living Room", "Fireplace", "Kitchen", "Garden"],
+      "facilities": ["#Living Room", "#Fireplace", "#Kitchen", "#Garden"],
       "image": "https://images.pexels.com/photos/262405/pexels-photo-262405.jpeg?auto=compress&cs=tinysrgb&w=600",
       "view_property": "View_Property"
     },
@@ -112,7 +112,7 @@
       "status": "rent",
       "area": "1100 sq ft",
       "location": "Miami, FL",
-      "facilities": ["Living Room", "Patio", "Kitchen", "Beach Access"],
+      "facilities": ["#Living Room", "#Patio", "#Kitchen", "#Beach Access"],
       "image": "https://images.pexels.com/photos/210617/pexels-photo-210617.jpeg?auto=compress&cs=tinysrgb&w=600",
       "view_property": "View_Property"
     }
