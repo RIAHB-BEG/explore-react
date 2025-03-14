@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { AuthContext } from "../authProvider/authProvider";
+import { AuthContext } from "../authProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 export default function Navbar() {
   const { user, signout } = useContext(AuthContext);

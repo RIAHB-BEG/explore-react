@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
-import { AuthContext } from "../authProvider/authProvider";
+import { AuthContext } from "../authProvider/AuthProvider";
+
 
 
 const Login = () => {

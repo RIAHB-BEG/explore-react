@@ -3,7 +3,8 @@ import { useContext, useState } from "react";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { AuthContext } from "../authProvider/authProvider";
+import { AuthContext } from "../authProvider/AuthProvider";
+
 
 export default function Register() {
 
@@ -23,12 +24,12 @@ export default function Register() {
       .then((result) => {
         console.log(result.user);
 
-      
+      toast.success("Registered Successfully!");
         // const token = result.user?.accessToken || "default-token";
         // localStorage.setItem("authToken", token);
         // setAuthToken(token);
 
-        toast.success("Registered Successfully!");
+        
 
        
         navigate("/Blog");
