@@ -27,83 +27,84 @@ import AuthProvider from './AuthProvider/AuthProvider';
 
 
 
-const router = createBrowserRouter([{
-  path:"/",
-  element:<HomeLayout></HomeLayout>,
-  
 
-  children :[
+const router = createBrowserRouter([{
+  path: "/",
+  element: <HomeLayout></HomeLayout>,
+
+
+  children: [
     {
-  path:'/',
-  element:<Home></Home>,
-  
+      path: '/',
+      element: <Home></Home>,
+
     },
 
     {
-      path:'/home',
-      element:<Home></Home>,
-      
-        },
+      path: '/home',
+      element: <Home></Home>,
+
+    },
     {
-      path:'/contact',
-     
-      element:<Contact></Contact>,
-        },
-        {
-          path:'/home/:id',
-          loader:()=>fetch("home.json"),
-      
-          element:<HomeDetails></HomeDetails>,
-        },
-        {
-          path:'/Listed Homes',
-          loader:()=>fetch("home.json"),
-         
-          element:<HomeDetails2></HomeDetails2>,
-        },
-        {
-          path:'/about',
-      
-         
-          element:<About></About>,
-        },
-        {
-          path:'/register',
-      
-         
-          element: <Register></Register>,
-        },
-        {
-          path:'/login',
-      
-         
-          element:<Login></Login>,
-        },
-        {
-          path:'/Blog',
-      
-         
-          element:<Blog></Blog>,
-        },
-    
+      path: '/contact',
+
+      element: <Contact></Contact>,
+    },
+    {
+      path: '/home/:id',
+      loader: () => fetch("home.json"),
+
+      element: <HomeDetails></HomeDetails>,
+    },
+    {
+      path: '/Listed Homes',
+      loader: () => fetch("home.json"),
+
+      element: <HomeDetails2></HomeDetails2>,
+    },
+    {
+      path: '/about',
+
+
+      element: <About></About>,
+    },
+    {
+      path: '/register',
+
+
+      element: <Register></Register>,
+    },
+    {
+      path: '/login',
+
+
+      element: <Login></Login>,
+    },
+    {
+      path: '/Blog',
+
+
+      element: <Blog></Blog>,
+    },
+
   ]
-  
-  }])
+
+}])
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
-<AuthProvider>
+    <AuthProvider>
 
-  <RouterProvider router={router}></RouterProvider>
-</AuthProvider>
-
-
-    
+      <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
 
 
-   
-  </StrictMode>,
+
+
+
+
+  </StrictMode>
   // <Home></Home>
 )
