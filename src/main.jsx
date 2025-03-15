@@ -47,13 +47,13 @@ const router = createBrowserRouter([{
     {
       path:'/contact',
      
-      element:<Contact></Contact>
+      element:<Contact></Contact>,
         },
         {
           path:'/home/:id',
           loader:()=>fetch("home.json"),
       
-          element:<HomeDetails></HomeDetails>
+          element:<HomeDetails></HomeDetails>,
         },
         {
           path:'/Listed Homes',
