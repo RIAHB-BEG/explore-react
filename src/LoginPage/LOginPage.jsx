@@ -42,6 +42,7 @@ const Login = () => {
           <div className="form-control">
             <label className="label">
               <span className="label-text">Name</span>
+              <span></span>
             </label>
             <input
               type="text"
