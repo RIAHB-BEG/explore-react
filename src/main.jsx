@@ -15,7 +15,7 @@ import Register from './register/Register';
 
 import About from './About/About';
 
-import AuthProvider from './authProvider/authProvider';
+import AuthProvider from './AuthProvider/AuthProvider';
 import Login from './LoginPage/LOginPage';
 import HomeDetails2 from './HomeDetails2.jsx/HomeDetails2';
 import Blog from './Blog/Blog';
