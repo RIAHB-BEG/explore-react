@@ -1,15 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
-
+import { useContext } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { AuthContext } from "../authProvider/AuthProvider";
-
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 export default function Register() {
-
   const { signUp } = useContext(AuthContext);
- 
   const navigate = useNavigate();
 
   const handleRegister = (e) => {
@@ -23,20 +19,12 @@ export default function Register() {
     signUp(email, password)
       .then((result) => {
         console.log(result.user);
-
-      toast.success("Registered Successfully!");
-        // const token = result.user?.accessToken || "default-token";
-        // localStorage.setItem("authToken", token);
-        // setAuthToken(token);
-
-        
-
-       
-        navigate("/Blog");
+        toast.success("Registered Successfully!");
+        setTimeout(() => navigate("/Blog"), 2000);
       })
       .catch((error) => {
         console.error(error);
-        toast.error("already registered !");
+        toast.error("Already registered!");
       });
   };
 
@@ -46,10 +34,7 @@ export default function Register() {
         <div className="card w-full max-w-md shadow-xl bg-white p-8 rounded-lg">
           <h2 className="text-2xl font-bold text-center mb-4">Register</h2>
 
-          <form onSubmit={handleRegister} className="space-y-4"
-
-
-          >
+          <form onSubmit={handleRegister} className="space-y-4">
             {/* Name Input */}
             <div className="form-control">
               <label className="label">
@@ -101,14 +86,14 @@ export default function Register() {
 
             {/* Already have an account? */}
             <p className="text-sm text-center mt-2">
-              Already have an account ?
+              Already have an account?{" "}
               <Link to="/login" className="text-blue-500 hover:underline ms-1">
                 Login
               </Link>
             </p>
           </form>
 
-          <ToastContainer />
+          <ToastContainer  />
         </div>
       </div>
     </>

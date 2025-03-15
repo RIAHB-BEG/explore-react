@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { AuthContext } from "../authProvider/AuthProvider";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 
 export default function Navbar() {
@@ -11,13 +11,18 @@ export default function Navbar() {
     signout()
       .then(() => {
         toast.success("Logged out successfully!");
-        navigate("/login"); // Redirect to login after logout
+        
+        // Delay navigation to ensure toast is displayed
+        setTimeout(() => {
+          navigate("/login");
+        }, 2000); // Delay in milliseconds to let the toast show
       })
       .catch((error) => {
         console.error(error);
         toast.error("Error logging out!");
       });
   };
+
   return (
     <>
       <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
@@ -37,12 +42,7 @@ export default function Navbar() {
                 <li><NavLink to="/about">About</NavLink></li>
                 <li><NavLink to="/Listed Homes"> WishList Homes</NavLink></li>
                 <li><NavLink to="/login">Login</NavLink></li>
-              
-                {user?.email &&
-
-                  <li><NavLink to="/Blog">Blog</NavLink></li>
-                }
-                
+                {user?.email && <li><NavLink to="/Blog">Blog</NavLink></li>}
               </ul>
             </div>
             {/* Brand Name */}
@@ -54,56 +54,36 @@ export default function Navbar() {
             <ul className="menu menu-horizontal space-x-6 text-lg">
               <li><NavLink to="/home" className="btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white">Home</NavLink></li>
               <li><NavLink to="/Listed homes" className="btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white">Wishlist Homes</NavLink></li>
-                <li><NavLink to="/about" className="btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white">About</NavLink></li>
-                { user?.email && <li>
-
-<NavLink to="/Blog" className=" btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white">
-Blog
-</NavLink>
-</li>}
+              <li><NavLink to="/about" className="btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white">About</NavLink></li>
+              {user?.email && <li><NavLink to="/Blog" className="btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white">Blog</NavLink></li>}
               <li><NavLink to="/contact" className="btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white">Contact</NavLink></li>
-            
-
-           
-              <li>
-                <NavLink to="/register" className="btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white">
-                  Login Page
-                </NavLink>
-              </li>
-
+              <li><NavLink to="/register" className="btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white">Login Page</NavLink></li>
             </ul>
           </div>
 
           {/* Right - Profile & Login/Logout Button */}
           <div className="flex items-center gap-4">
-
-            <>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-cWUs3pYA_8DMiWUevXRneH3TNv59GLweTg8wjSufM4RMNDmTi3AR-uRqxSHV68aTxh-o9Q&s"
-                className="w-10 h-10 rounded-full"
-                alt="User Profile"
-              />
-
-            </>
-
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-cWUs3pYA_8DMiWUevXRneH3TNv59GLweTg8wjSufM4RMNDmTi3AR-uRqxSHV68aTxh-o9Q&s"
+              className="w-10 h-10 rounded-full"
+              alt="User Profile"
+            />
             {user ? (
-  <NavLink
-    to="/login"
-    onClick={handleLogOut}
-    className="btn bg-transparent border-red-400 text-red-400 hover:bg-red-400 hover:text-white"
-  >
-    Logout
-  </NavLink>
-) : (
-  <NavLink
-    to="/login"
-    className="btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white"
-  >
-    Login
-  </NavLink>
-)}
-
-
+              <NavLink
+                to="/login"
+                onClick={handleLogOut}
+                className="btn bg-transparent border-red-400 text-red-400 hover:bg-red-400 hover:text-white"
+              >
+                Logout
+              </NavLink>
+            ) : (
+              <NavLink
+                to="/login"
+                className="btn bg-transparent border-green-400 text-green-400 hover:bg-green-500 hover:text-white"
+              >
+                Login
+              </NavLink>
+            )}
           </div>
         </div>
       </div>
